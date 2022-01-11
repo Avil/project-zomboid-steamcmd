@@ -15,7 +15,7 @@ ENV PORT=7787 QUERYPORT=27165 RCONPORT=21114 FIXEDMAXPLAYERS=80 RANDOM=NONE
 VOLUME /home/steam/project-zomboid-dedicated
 
 # Set Entrypoint; Technically 2 steps: 1. Update server, 2. Start server
-ENTRYPOINT ./home/steam/steamcmd/steamcmd.sh +login anonymous +force_install_dir /home/steam/project-zomboid-dedicated +app_update 380870 +quit && \
+ENTRYPOINT ./steamcmd.sh +login anonymous +force_install_dir /home/steam/project-zomboid-dedicated +app_update 380870 +quit && \
         # ./home/steam/project-zomboid-dedicated/start-server.sh -servername $SERVERNAME 
 		bash
         
